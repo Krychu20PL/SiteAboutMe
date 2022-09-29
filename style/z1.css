@@ -146,15 +146,16 @@ a > img {
     width: 3em;
     height: 3em;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     body {
         padding: 0;
     }
     main {
         flex-direction: column;
     }
-    article {
+    main > article {
         order: 2;
+        padding: 7em 7em;
     }
     aside {
         order: 1;
@@ -177,6 +178,57 @@ a > img {
         padding-bottom: 2em;
     }
     button > img:hover, button > img:focus {
+        background-color: rgb(82, 19, 19);
+    }
+}
+
+@media screen and (max-width: 749px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main > article {
+        order: 2;
+        padding: 5em 5em;
+    }
+
+    article > #maintitle, article > #contents {
+        min-width: 50vw;
+        margin: auto;
+    }
+
+    aside {
+        order: 1;
+    }
+
+    aside>button {
+        display: block;
+        background: none;
+        border: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .smenu {
+        display: block;
+    }
+
+    div.gallery {
+        display: block;
+    }
+
+    div.gallery>div {
+        padding-bottom: 2em;
+    }
+
+    button>img:hover,
+    button>img:focus {
         background-color: rgb(82, 19, 19);
     }
 }

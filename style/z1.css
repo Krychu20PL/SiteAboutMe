@@ -50,6 +50,7 @@ nav > ul > li:hover {
 main {
     display: flex;
     background-color: rgb(46, 12, 12);
+    min-height: 65vh;
 }
 main > aside {
     flex:1;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 1</title>
+    <link rel="stylesheet" href="style/z1.css">
+</head>
+<body>
+    <div id="container">
+    <header>
+        <div id="logo">
+            <img src="images/logosite.png" alt="logo">
+        </div>
+        <h1>Krystian Kuźma</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">strona główna</a></li>
+            <li><a href="gallery.html">galeria</a></li>
+            <li><a href="contact.html">kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <button onclick="showMenu()"><img src="images/dpicon.png" alt="menu"></button>
+            <ul id="dpdown" class="menu">
+                <li id="infos" onclick="info()">Informacje na temat strony</li>
+                <li id="interests" onclick="interest()">Moje zainteresowania</li>
+                <li id="education" onclick="edu()">Wykształcenie</li>
+            </ul>
+        </aside>
+        <article>
+            <h2 id="maintitle">Informacje na temat strony</h2>
+            <p id="contents">To jest strona główna projektu wykonanego na zaliczenie przedmiotu związanego z programowaniem aplikacji internetowych. W tym projekcie zawartych jest kilka informacji na mój temat, a w galerii znajduje się portfolio wykonanych przeze mnie grafik. Grafiki te zostały wykonane na poprzednim kierunku szkoły policealnej, w której aktualnie się uczę.</p>
+        </article>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com"><img src="images/socialfb.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com"><img src="images/socialig.png" alt="Instagram"></a></li>
+            <li><a href="https://www.twitter.com"><img src="images/socialtw.png" alt="Twitter"></a></li>
+        </ul>
+    </footer>
+</div>
+<script>
+    function showMenu() {
+        document.getElementById("dpdown").classList.toggle("smenu");
+    }
+    function info() {
+        //console.log("Works!");
+        let ch = document.getElementById("infos").innerHTML;
+        document.getElementById("maintitle").innerHTML = ch;
+        document.getElementById("contents").innerHTML = "To jest strona główna projektu wykonanego na zaliczenie przedmiotu związanego z programowaniem aplikacji internetowych. W tym projekcie zawartych jest kilka informacji na mój temat, a w galerii znajduje się portfolio wykonanych przeze mnie grafik. Grafiki te zostały wykonane na poprzednim kierunku szkoły policealnej, w której aktualnie się uczę.";
+    }
+    function interest() {
+        //console.log("Works!");
+        let ch = document.getElementById("interests").innerHTML;
+        document.getElementById("maintitle").innerHTML = ch;
+        document.getElementById("contents").innerHTML = "Interesuję się różnymi tematami z dziedziny informatyki, między innymi programowaniem oraz grafiką komputerową. Interesuje mnie również uprawianie różnych sportów, staram się próbować wszystkiego co się da w tej dziedzinie od piłki nożnej po sporty zimowe, jak jazda na nartach. Podobnie jest także z programowaniem. Fascynuje mnie ta dziedzina do tego stopnia, że chciałbym się nauczyć programowania w wielu językach/technologiach i móc współtworzyć zaawansowane projekty oraz je dopracowywać.";
+    }
+    function edu() {
+        //console.log("Works!");
+        let ch = document.getElementById("education").innerHTML;
+        document.getElementById("maintitle").innerHTML = ch;
+        document.getElementById("contents").innerHTML = "Skończyłem technikum, a konkretniej Zespół Szkół Elektryczno-Elektronicznych w Szczecinie na kierunku informatyk. Po ukończeniu technikum w 2020 roku zapisałem się do szkoły policealnej TEB Edukacja w Opolu na kierunku grafik komputerowy. Po ukończeniu rocznego kursu zapisałem się na kolejny kierunek, który mnie interesuje jeszcze bardziej niż poprzedni, czyli Programowanie Aplikacji Internetowych i Mobilnych. A teraz po ukończeniu tego kierunku zapisałem się na game design.";
+    }
+</script>
+</body>
+</html>

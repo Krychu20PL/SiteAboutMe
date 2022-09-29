@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt 1</title>
+    <link rel="stylesheet" href="style/z1.css">
+</head>
+<body>
+    <div id="container">
+    <header>
+        <div id="logo">
+            <img src="images/logosite.png" alt="logo">
+        </div>
+        <h1>Krystian Kuźma</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">strona główna</a></li>
+            <li><a href="gallery.html">galeria</a></li>
+            <li><a href="contact.html">kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <aside>
+            <button onclick="showMenu()" class="dropbtn"><img src="images/dpicon.png" alt="menu"></button>
+            <ul id="dpdown" class="menu">
+                <li id="logos" onclick="logos()">loga</li>
+                <li id="linearts" onclick="linearts()">grafiki w stylu line art</li>
+            </ul>
+        </aside>
+        <article>
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <div class="artOne"><a id="linkOne" href="images/logoart.png" target="_blank"><img id="imgOne" src="images/logoart.png" alt="logoart1"></a></div>
+                <div class="artTwo"><a id="linkTwo" href="images/logoart2.png" target="_blank"><img id="imgTwo" src="images/logoart2.png" alt="logoart2"></a></div>
+                <div class="artThree"><a id="linkThr" href="images/logoart3.png" target="_blank"><img id="imgThr" src="images/logoart3.png" alt="logoart3"></a></div>
+                <div class="artFour"><a id="linkFour" href="images/logoart4.png" target="_blank"><img id="imgFour" src="images/logoart4.png" alt="logoart4"></a></div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com"><img src="images/socialfb.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com"><img src="images/socialig.png" alt="Instagram"></a></li>
+            <li><a href="https://www.twitter.com"><img src="images/socialtw.png" alt="Twitter"></a></li>
+        </ul>
+    </footer>
+</div>
+<script>
+    function showMenu() {
+        document.getElementById("dpdown").classList.toggle("smenu");
+    }
+    function logos() {
+        document.getElementById("imgOne").src = "images/logoart.png";
+        document.getElementById("imgTwo").src = "images/logoart2.png";
+        document.getElementById("imgThr").src = "images/logoart3.png";
+        document.getElementById("imgFour").src = "images/logoart4.png";
+        document.getElementById("linkOne").href = "images/logoart.png";
+        document.getElementById("linkTwo").href = "images/logoart2.png";
+        document.getElementById("linkThr").href = "images/logoart3.png";
+        document.getElementById("linkFour").href = "images/logoart4.png";
+    }
+    function linearts() {
+        document.getElementById("imgOne").src = "images/lineart.png";
+        document.getElementById("imgTwo").src = "images/lineart2.png";
+        document.getElementById("imgThr").src = "images/lineart3.png";
+        document.getElementById("imgFour").src = "images/lineart4.png";
+        document.getElementById("linkOne").href = "images/lineart.png";
+        document.getElementById("linkTwo").href = "images/lineart2.png";
+        document.getElementById("linkThr").href = "images/lineart3.png";
+        document.getElementById("linkFour").href = "images/lineart4.png";
+    }
+</script>
+</body>
+</html>

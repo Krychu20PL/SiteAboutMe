@@ -94,7 +94,7 @@ div.gallery {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr; 
-    gap: 5em 5em; 
+    gap: 5em 5em;
     grid-template-areas: 
       "artOne artTwo"
       "artThree artFour"; 
@@ -103,8 +103,6 @@ div.gallery img {
     width: 250px;
     height: auto;
     padding: 2em;
-}
-div.gallery img {
     border: 3px solid rgb(82, 19, 19);
     border-radius: 1em;
 }
@@ -193,7 +191,7 @@ a > img {
 
     main > article {
         order: 2;
-        padding: 5em 5em;
+        /* padding: 5em 5em; */
     }
 
     article > #maintitle, article > #contents {
@@ -230,6 +228,19 @@ a > img {
     button>img:hover,
     button>img:focus {
         background-color: rgb(82, 19, 19);
+    }
+}
+@media screen and (max-width: 500px) {
+    main > article {
+        padding: 0;
+    }
+
+    article > div.gallery {
+        margin: 0;
+    }
+    
+    div.gallery img{
+        max-width: 40vw;
     }
 }
 @media print {
